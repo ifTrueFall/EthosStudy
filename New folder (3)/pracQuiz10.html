@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Feminism and D&D Quiz</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #d5b06f;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .nav a:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="pracQuiz.html">Q1 Mill</a>
+        <a href="pracQuiz2.html">Q2 Rachels</a>
+        <a href="pracQuiz3.html">Q3 Kant</a>
+        <a href="pracQuiz4.html">Q4 Papadimos</a>
+        <a href="pracQuiz5.html">Q5 Aristotle</a>
+        <a href="pracQuiz6.html">Q6 Hill</a> <br />
+        <a href="pracQuiz7.html">Q7 Rawls</a>
+        <a href="pracQuiz8.html">Q8 Mark</a>
+        <a href="pracQuiz9.html">Q9 Young</a>
+        <a href="pracQuiz10.html">Qu10 Musset</a>
+        <a href="pracQuiz11.html">Q11 Zhuangzi</a>
+        <a href="pracQuiz12.html">Q12 AltmannNordan</a>
+    </div>
+    <h1>Feminism and D&D Quiz</h1>
+    <div id="question1">
+        <p>Q1. Third wave feminism is primarily characterized by:</p>
+        <ul>
+            <input type="radio" id="answer1a" name="question1" value="a"> A. Breaking the glass ceiling
+            <br />
+            <input type="radio" id="answer1b" name="question1" value="b"> B. Abortion rights
+            <br />
+            <input type="radio" id="answer1c" name="question1" value="c"> C. Intersectionality
+            <br />
+            <input type="radio" id="answer1d" name="question1" value="d"> D. None of the options
+            <br />
+            <input type="radio" id="answer1e" name="question1" value="e"> E. Economic equality
+            <br />
+            <input type="radio" id="answer1f" name="question1" value="f"> F. The right to privacy
+            <br />
+        </ul>
+        <p id="feedback1"></p>
+    </div>
+
+    <div id="question2">
+        <p>Q2. Most fundamentally, feminism is:</p>
+        <ul>
+            <input type="radio" id="answer2a" name="question2" value="a"> A. A movement to end sexist oppression.
+            <br />
+            <input type="radio" id="answer2b" name="question2" value="b"> B. Concerned with reproductive rights.
+            <br />
+            <input type="radio" id="answer2c" name="question2" value="c"> C. A white liberal movement.
+            <br />
+            <input type="radio" id="answer2d" name="question2" value="d"> D. Anti-male.
+            <br />
+            <input type="radio" id="answer2e" name="question2" value="e"> E. Divisive.
+            <br />
+            <input type="radio" id="answer2f" name="question2" value="f"> F. None of the options.
+            <br />
+        </ul>
+        <p id="feedback2"></p>
+    </div>
+
+    <div id="question3">
+        <p>Q3. The role of a character's sex in Dungeon's and Dragon's is:</p>
+        <ul>
+            <input type="radio" id="answer3a" name="question3" value="a"> A. Decided by whether the character is a fighter or not.
+            <br />
+            <input type="radio" id="answer3b" name="question3" value="b"> B. All of the options.
+            <br />
+            <input type="radio" id="answer3c" name="question3" value="c"> C. Necessarily reflective of the player's sex
+            <br />
+            <input type="radio" id="answer3d" name="question3" value="d"> D. Not really important to its success
+            <br />
+            <input type="radio" id="answer3e" name="question3" value="e"> E. Inherently tied to other characteristics
+            <br />
+            <input type="radio" id="answer3f" name="question3" value="f"> F. None of the options.
+            <br />
+        </ul>
+        <p id="feedback3"></p>
+    </div>
+
+    <div id="question4">
+        <p>Q4. According to Musset, drag illustrates that gender is:</p>
+        <ul>
+            <input type="radio" id="answer4a" name="question4" value="a"> A. All of the options.
+            <br />
+            <input type="radio" id="answer4b" name="question4" value="b"> B. Performative
+            <br />
+            <input type="radio" id="answer4c" name="question4" value="c"> C. Biological
+            <br />
+            <input type="radio" id="answer4d" name="question4" value="d"> D. None of the options.
+            <br />
+            <input type="radio" id="answer4e" name="question4" value="e"> E. Unimportant
+            <br />
+            <input type="radio" id="answer4f" name="question4" value="f"> F. Immutable
+            <br />
+        </ul>
+        <p id="feedback4"></p>
+    </div>
+
+    <div id="question5">
+        <p>Q5. Mussett ultimately argues that D&D:</p>
+        <ul>
+            <input type="radio" id="answer5a" name="question5" value="a"> A. Allows players to imagine a world of liberation.
+            <br />
+            <input type="radio" id="answer5b" name="question5" value="b"> B. Constraints players too much to be truly imaginative
+            <br />
+            <input type="radio" id="answer5c" name="question5" value="c"> C. All of the options.
+            <br />
+            <input type="radio" id="answer5d" name="question5" value="d"> D. None of the options.
+            <br />
+            <input type="radio" id="answer5e" name="question5" value="e"> E. Forces people out of their comfort zones.
+            <br />
+            <input type="radio" id="answer5f" name="question5" value="f"> F. Merely reproduces the sexist dynamics of society
+            <br />
+        </ul>
+        <p id="feedback5"></p>
+    </div>
+
+    <script>
+        function handleAnswerSelection(questionId, correctAnswer) {
+            const questionElement = document.getElementById(questionId);
+            const radioButtons = questionElement.querySelectorAll('input[type="radio"]');
+            const feedbackElement = questionElement.querySelector('p[id^="feedback"]');
+
+            for (const radioButton of radioButtons) {
+                radioButton.addEventListener('click', () => {
+                    if (radioButton.value === correctAnswer) {
+                        feedbackElement.textContent = "Correct!";
+                        feedbackElement.style.color = "green";
+                    } else {
+                        feedbackElement.textContent = "Incorrect. Please try again.";
+                        feedbackElement.style.color = "red";
+                    }
+                });
+            }
+        }
+
+        handleAnswerSelection("question1", "c");
+        handleAnswerSelection("question2", "a");
+        handleAnswerSelection("question3", "d");
+        handleAnswerSelection("question4", "b");
+        handleAnswerSelection("question5", "a");
+    </script>
+</body>
+</html>

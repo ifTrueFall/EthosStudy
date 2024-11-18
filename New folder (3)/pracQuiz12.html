@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Disability Studies Quiz</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #d5b06f;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .nav a:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="pracQuiz.html">Q1 Mill</a>
+        <a href="pracQuiz2.html">Q2 Rachels</a>
+        <a href="pracQuiz3.html">Q3 Kant</a>
+        <a href="pracQuiz4.html">Q4 Papadimos</a>
+        <a href="pracQuiz5.html">Q5 Aristotle</a>
+        <a href="pracQuiz6.html">Q6 Hill</a> <br/>
+        <a href="pracQuiz7.html">Q7 Rawls</a>
+        <a href="pracQuiz8.html">Q8 Mark</a>
+        <a href="pracQuiz9.html">Q9 Young</a>
+        <a href="pracQuiz10.html">Qu10 Musset</a>
+        <a href="pracQuiz11.html">Q11 Zhuangzi</a>
+        <a href="pracQuiz12.html">Q12 AltmannNordan</a>
+    </div>
+	
+    <h1>Altmann and Van Norden</h1>
+    <div id="question1">
+        <p>Q1. The medical model of disability locates the cause of limitations:</p>
+        <ul>
+            <input type="radio" id="answer1a" name="question1" value="a"> A. In the infrastructure.
+            <br />
+            <input type="radio" id="answer1b" name="question1" value="b"> B. None of the options.
+            <br />
+            <input type="radio" id="answer1c" name="question1" value="c"> C. In society.
+            <br />
+            <input type="radio" id="answer1d" name="question1" value="d"> D. All of the options.
+            <br />
+            <input type="radio" id="answer1e" name="question1" value="e"> E. In the impairment itself.
+            <br />
+            <input type="radio" id="answer1f" name="question1" value="f"> F. In people's attitudes about disability.
+            <br />
+        </ul>
+        <p id="feedback1"></p>
+    </div>
+
+    <div id="question2">
+        <p>Q2. The social model of disability locates the cause of limitations:</p>
+        <ul>
+            <input type="radio" id="answer2a" name="question2" value="a"> A. Lack of accommodations.
+            <br />
+            <input type="radio" id="answer2b" name="question2" value="b"> B. In the infrastructure.
+            <br />
+            <input type="radio" id="answer2c" name="question2" value="c"> C. In people's attitudes about disability.
+            <br />
+            <input type="radio" id="answer2d" name="question2" value="d"> D. In society.
+            <br />
+            <input type="radio" id="answer2e" name="question2" value="e"> E. None of the options.
+            <br />
+            <input type="radio" id="answer2f" name="question2" value="f"> F. All of the options.
+            <br />
+        </ul>
+        <p id="feedback2"></p>
+    </div>
+
+    <div id="question3">
+        <p>Q3. Altmann and Van Norden trace the association of disability with badness to:</p>
+        <ul>
+            <input type="radio" id="answer3a" name="question3" value="a"> A. None of the options.
+            <br />
+            <input type="radio" id="answer3b" name="question3" value="b"> B. Christian and Jewish traditions.
+            <br />
+            <input type="radio" id="answer3c" name="question3" value="c"> C. Ancient Greek philosophy.
+            <br />
+            <input type="radio" id="answer3d" name="question3" value="d"> D. Islamic traditions.
+            <br />
+            <input type="radio" id="answer3e" name="question3" value="e"> E. Confucianism.
+            <br />
+            <input type="radio" id="answer3f" name="question3" value="f"> F. All of the options.
+            <br />
+        </ul>
+        <p id="feedback3"></p>
+    </div>
+
+    <div id="question4">
+        <p>Q4. In this context, teleology means:</p>
+        <ul>
+            <input type="radio" id="answer4a" name="question4" value="a"> A. There are natural standards for physiology.
+            <br />
+            <input type="radio" id="answer4b" name="question4" value="b"> B. There are natural standards that define normalcy.
+            <br />
+            <input type="radio" id="answer4c" name="question4" value="c"> C. None of the options.
+            <br />
+            <input type="radio" id="answer4d" name="question4" value="d"> D. Difference is a defect.
+            <br />
+            <input type="radio" id="answer4e" name="question4" value="e"> E. There are natural standards for morality.
+            <br />
+            <input type="radio" id="answer4f" name="question4" value="f"> F. All of the options.
+            <br />
+        </ul>
+        <p id="feedback4"></p>
+    </div>
+
+    <div id="question5">
+        <p>Q5. Zhuangzi's understanding of virtue is that:</p>
+        <ul>
+            <input type="radio" id="answer5a" name="question5" value="a"> A. None of the options.
+            <br />
+            <input type="radio" id="answer5b" name="question5" value="b"> B. We should live according to nature.
+            <br />
+            <input type="radio" id="answer5c" name="question5" value="c"> C. One can harmonize with their situation.
+            <br />
+            <input type="radio" id="answer5d" name="question5" value="d"> D. Virtue has no definitive form.
+            <br />
+            <input type="radio" id="answer5e" name="question5" value="e"> E. All of the options.
+            <br />
+            <input type="radio" id="answer5f" name="question5" value="f"> F. It is non-teleological.
+            <br />
+        </ul>
+        <p id="feedback5"></p>
+    </div>
+
+    <script>
+        function handleAnswerSelection(questionId, correctAnswer) {
+            const questionElement = document.getElementById(questionId);
+            const radioButtons = questionElement.querySelectorAll('input[type="radio"]');
+            const feedbackElement = questionElement.querySelector('p[id^="feedback"]');
+
+            for (const radioButton of radioButtons) {
+                radioButton.addEventListener('click', () => {
+                    if (radioButton.value === correctAnswer) {
+                        feedbackElement.textContent = "Correct!";
+                        feedbackElement.style.color = "green";
+                    } else {
+                        feedbackElement.textContent = "Incorrect. Please try again.";
+                        feedbackElement.style.color = "red";
+                    }
+                });
+            }
+        }
+
+        handleAnswerSelection("question1", "e");
+        handleAnswerSelection("question2", "f");
+        handleAnswerSelection("question3", "d");
+        handleAnswerSelection("question4", "f");
+        handleAnswerSelection("question5", "e");
+    </script>
+</body>
+</html>

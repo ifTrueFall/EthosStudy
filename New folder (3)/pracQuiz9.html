@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Meritocracy Quiz</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #d5b06f;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .nav a:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="pracQuiz.html">Q1 Mill</a>
+        <a href="pracQuiz2.html">Q2 Rachels</a>
+        <a href="pracQuiz3.html">Q3 Kant</a>
+        <a href="pracQuiz4.html">Q4 Papadimos</a>
+        <a href="pracQuiz5.html">Q5 Aristotle</a>
+        <a href="pracQuiz6.html">Q6 Hill</a> <br />
+        <a href="pracQuiz7.html">Q7 Rawls</a>
+        <a href="pracQuiz8.html">Q8 Mark</a>
+        <a href="pracQuiz9.html">Q9 Young</a>
+        <a href="pracQuiz10.html">Qu10 Musset</a>
+        <a href="pracQuiz11.html">Q11 Zhuangzi</a>
+        <a href="pracQuiz12.html">Q12 AltmannNordan</a>
+    </div>
+    <h1> Young Quiz </h1>
+    <div id="question1">
+        <p>Q1. Social justice:</p>
+        <ul>
+            <input type="radio" id="answer1a" name="question1" value="a"> A. Is paradigmatically opposed to distributive justice.
+            <br />
+            <input type="radio" id="answer1b" name="question1" value="b"> B. Was the original title for the movie Justice League (2017).
+            <br />
+            <input type="radio" id="answer1c" name="question1" value="c"> C. Focuses on material social goods.
+            <br />
+            <input type="radio" id="answer1d" name="question1" value="d"> D. Is about the relationship between societies.
+            <br />
+            <input type="radio" id="answer1e" name="question1" value="e"> E. None of the options.
+            <br />
+            <input type="radio" id="answer1f" name="question1" value="f"> F. Emphasizes non-material social goods.
+            <br />
+        </ul>
+        <p id="feedback1"></p>
+    </div>
+
+    <div id="question2">
+        <p>Q2. According to Young, oppression occurs:</p>
+        <ul>
+            <input type="radio" id="answer2a" name="question2" value="a"> A. Between governments and the citizenry.
+            <br />
+            <input type="radio" id="answer2b" name="question2" value="b"> B. All of the options.
+            <br />
+            <input type="radio" id="answer2c" name="question2" value="c"> C. Between individuals.
+            <br />
+            <input type="radio" id="answer2d" name="question2" value="d"> D. Between lords and peasants.
+            <br />
+            <input type="radio" id="answer2e" name="question2" value="e"> E. Between social groups.
+            <br />
+            <input type="radio" id="answer2f" name="question2" value="f"> F. None of the options.
+            <br />
+        </ul>
+        <p id="feedback2"></p>
+    </div>
+
+    <div id="question3">
+        <p>Q3. According to Young, possibly the most dangerous form of oppression is:</p>
+        <ul>
+            <input type="radio" id="answer3a" name="question3" value="a"> A. Powerlessness
+            <br />
+            <input type="radio" id="answer3b" name="question3" value="b"> B. Exploitation
+            <br />
+            <input type="radio" id="answer3c" name="question3" value="c"> C. Marginalization
+            <br />
+            <input type="radio" id="answer3d" name="question3" value="d"> D. Violence
+            <br />
+            <input type="radio" id="answer3e" name="question3" value="e"> E. None is more dangerous than the others
+            <br />
+            <input type="radio" id="answer3f" name="question3" value="f"> F. Cultural imperialism
+            <br />
+        </ul>
+        <p id="feedback3"></p>
+    </div>
+
+    <div id="question4">
+        <p>Q4. For Young, the powerless:</p>
+        <ul>
+            <input type="radio" id="answer4a" name="question4" value="a"> A. All of the options
+            <br />
+            <input type="radio" id="answer4b" name="question4" value="b"> B. Are not respected
+            <br />
+            <input type="radio" id="answer4c" name="question4" value="c"> C. Do not exercise creativity
+            <br />
+            <input type="radio" id="answer4d" name="question4" value="d"> D. Lack authority
+            <br />
+            <input type="radio" id="answer4e" name="question4" value="e"> E. Present themselves awkwardly
+            <br />
+            <input type="radio" id="answer4f" name="question4" value="f"> F. None of the options
+            <br />
+        </ul>
+        <p id="feedback4"></p>
+    </div>
+
+    <div id="question5">
+        <p>Q5. In order for oppression to be extant, the presence of what is required?</p>
+        <ul>
+            <input type="radio" id="answer5a" name="question5" value="a"> A. Any of the faces of oppression
+            <br />
+            <input type="radio" id="answer5b" name="question5" value="b"> B. Powerlessness + Violence + any of the other faces of oppression.
+            <br />
+            <input type="radio" id="answer5c" name="question5" value="c"> C. At least three out of five faces of oppression
+            <br />
+            <input type="radio" id="answer5d" name="question5" value="d"> D. Violence + any of the other faces of oppression
+            <br />
+            <input type="radio" id="answer5e" name="question5" value="e"> E. All five faces of oppression
+            <br />
+            <input type="radio" id="answer5f" name="question5" value="f"> F. Marginalization + any of the other faces of oppression
+            <br />
+        </ul>
+        <p id="feedback5"></p>
+    </div>
+
+    <script>
+
+        function handleAnswerSelection(questionId, correctAnswer) {
+            const questionElement = document.getElementById(questionId);
+            const radioButtons = questionElement.querySelectorAll('input[type="radio"]');
+            const feedbackElement = questionElement.querySelector('p[id^="feedback"]');
+
+            for (const radioButton of radioButtons) {
+                radioButton.addEventListener('click', () => {
+                    if (radioButton.value === correctAnswer) {
+                        feedbackElement.textContent = "Correct!";
+                        feedbackElement.style.color = "green";
+                    } else {
+                        feedbackElement.textContent = "Incorrect. Please try again.";
+                        feedbackElement.style.color = "red";
+                    }
+                });
+            }
+        }
+        // Call the function for each new question with the correct answer
+        handleAnswerSelection("question1", "f");
+        handleAnswerSelection("question2", "e");
+        handleAnswerSelection("question3", "c");
+        handleAnswerSelection("question4", "a");
+        handleAnswerSelection("question5", "a");
+    </script>
+</body>
+</html>

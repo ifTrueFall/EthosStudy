@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Aristotle Quiz</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #d5b06f;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .nav a:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="pracQuiz.html">Q1 Mill</a>
+        <a href="pracQuiz2.html">Q2 Rachels</a>
+        <a href="pracQuiz3.html">Q3 Kant</a>
+        <a href="pracQuiz4.html">Q4 Papadimos</a>
+        <a href="pracQuiz5.html">Q5 Aristotle</a>
+        <a href="pracQuiz6.html">Q6 Hill</a> <br />
+        <a href="pracQuiz7.html">Q7 Rawls</a>
+        <a href="pracQuiz8.html">Q8 Mark</a>
+        <a href="pracQuiz9.html">Q9 Young</a>
+        <a href="pracQuiz10.html">Qu10 Musset</a>
+        <a href="pracQuiz11.html">Q11 Zhuangzi</a>
+        <a href="pracQuiz12.html">Q12 AltmannNordan</a>
+    </div>
+    <h1>Aristotle Quiz</h1>
+    <div id="question1">
+        <p>Q1. For Aristotle, to be a morally good person, is to:</p>
+        <ul>
+            <input type="radio" id="answer1a" name="question1" value="a"> A. Does as God commands
+            <br />
+            <input type="radio" id="answer1b" name="question1" value="b"> B. Eat good food and watch Netflix
+            <br />
+            <input type="radio" id="answer1c" name="question1" value="c"> C. None of the options
+            <br />
+            <input type="radio" id="answer1d" name="question1" value="d"> D. Perform our function as human beings
+            <br />
+            <input type="radio" id="answer1e" name="question1" value="e"> E. Be concerned with the consequences of our actions
+            <br />
+            <input type="radio" id="answer1f" name="question1" value="f"> F. Live according to our passion
+            <br />
+        </ul>
+        <p id="feedback1"></p>
+    </div>
+
+    <div id="question2">
+        <p>Q2. According to Aristotle, the good of a thing is:</p>
+        <ul>
+            <input type="radio" id="answer2a" name="question2" value="a"> A. Expressed by its monetary value
+            <br />
+            <input type="radio" id="answer2b" name="question2" value="b"> B. None of the options
+            <br />
+            <input type="radio" id="answer2c" name="question2" value="c"> C. Whatever the thing wants it to be
+            <br />
+            <input type="radio" id="answer2d" name="question2" value="d"> D. Defined by its ultimate end
+            <br />
+            <input type="radio" id="answer2e" name="question2" value="e"> E. Relative to other people's desires
+            <br />
+            <input type="radio" id="answer2f" name="question2" value="f"> F. Determined by the political ends it can serve
+            <br />
+        </ul>
+        <p id="feedback2"></p>
+    </div>
+
+    <div id="question3">
+        <p>Q3. According to Aristotle, what is good without qualification?</p>
+        <ul>
+            <input type="radio" id="answer3a" name="question3" value="a"> A. Education
+            <br />
+            <input type="radio" id="answer3b" name="question3" value="b"> B. Happiness
+            <br />
+            <input type="radio" id="answer3c" name="question3" value="c"> C. Pleasure
+            <br />
+            <input type="radio" id="answer3d" name="question3" value="d"> D. Desire
+            <br />
+            <input type="radio" id="answer3e" name="question3" value="e"> E. None of the options
+            <br />
+            <input type="radio" id="answer3f" name="question3" value="f"> F. Faith
+            <br />
+        </ul>
+        <p id="feedback3"></p>
+    </div>
+
+    <div id="question4">
+        <p>Q4. According to Aristotle, happiness requires:</p>
+        <ul>
+            <input type="radio" id="answer4a" name="question4" value="a"> A. Virtuous action
+            <br />
+            <input type="radio" id="answer4b" name="question4" value="b"> B. None of the options
+            <br />
+            <input type="radio" id="answer4c" name="question4" value="c"> C. Meeting our expectations for ourselves
+            <br />
+            <input type="radio" id="answer4d" name="question4" value="d"> D. The satisfaction of our desires
+            <br />
+            <input type="radio" id="answer4e" name="question4" value="e"> E. Complete virtue and a complete life
+            <br />
+            <input type="radio" id="answer4f" name="question4" value="f"> F. Empathy
+            <br />
+        </ul>
+        <p id="feedback4"></p>
+    </div>
+
+    <div id="question5">
+        <p>Q5. Which is the following is true with respect to virtue:</p>
+        <ul>
+            <input type="radio" id="answer5a" name="question5" value="a"> A. It is generally a state between excess and deficiency
+            <br />
+            <input type="radio" id="answer5b" name="question5" value="b"> B. All of the options
+            <br />
+            <input type="radio" id="answer5c" name="question5" value="c"> C. Pleasure tends to distract from it
+            <br />
+            <input type="radio" id="answer5d" name="question5" value="d"> D. It involves rational choice
+            <br />
+            <input type="radio" id="answer5e" name="question5" value="e"> E. None of the options
+            <br />
+            <input type="radio" id="answer5f" name="question5" value="f"> F. The virtuous action differs from person to person
+            <br />
+        </ul>
+        <p id="feedback5"></p>
+    </div>
+
+    <script>
+        function handleAnswerSelection(questionId, correctAnswer) {
+            const questionElement = document.getElementById(questionId);
+            const radioButtons = questionElement.querySelectorAll('input[type="radio"]');
+            const feedbackElement = questionElement.querySelector('p[id^="feedback"]');
+
+            for (const radioButton of radioButtons) {
+                radioButton.addEventListener('click', () => {
+                    if (radioButton.value === correctAnswer) {
+                        feedbackElement.textContent = "Correct!";
+                        feedbackElement.style.color = "green";
+                    } else {
+                        feedbackElement.textContent = "Incorrect. Please try again.";
+                        feedbackElement.style.color = "red";
+                    }
+                });
+            }
+        }
+
+        handleAnswerSelection("question1", "d");
+        handleAnswerSelection("question2", "d");
+        handleAnswerSelection("question3", "b");
+        handleAnswerSelection("question4", "e");
+        handleAnswerSelection("question5", "b");
+    </script>
+</body>
+</html>

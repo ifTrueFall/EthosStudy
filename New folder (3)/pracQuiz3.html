@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Kant Quiz</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #d5b06f;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .nav a:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="pracQuiz.html">Q1 Mill</a>
+        <a href="pracQuiz2.html">Q2 Rachels</a>
+        <a href="pracQuiz3.html">Q3 Kant</a>
+        <a href="pracQuiz4.html">Q4 Papadimos</a>
+        <a href="pracQuiz5.html">Q5 Aristotle</a>
+        <a href="pracQuiz6.html">Q6 Hill</a> <br />
+        <a href="pracQuiz7.html">Q7 Rawls</a>
+        <a href="pracQuiz8.html">Q8 Mark</a>
+        <a href="pracQuiz9.html">Q9 Young</a>
+        <a href="pracQuiz10.html">Qu10 Musset</a>
+        <a href="pracQuiz11.html">Q11 Zhuangzi</a>
+        <a href="pracQuiz12.html">Q12 AltmannNordan</a>
+    </div>
+    <h1>Kant Quiz</h1>
+    <div id="question1">
+        <p>Q1. For Kant, moral rules are:</p>
+        <ul>
+            <input type="radio" id="answer1a" name="question1" value="a"> A. Subject to change over time
+            <br />
+            <input type="radio" id="answer1b" name="question1" value="b"> B. Universal
+            <br />
+            <input type="radio" id="answer1c" name="question1" value="c"> C. Culturally determined
+            <br />
+            <input type="radio" id="answer1d" name="question1" value="d"> D. Determined by their consequences
+            <br />
+            <input type="radio" id="answer1e" name="question1" value="e"> E. None of the options
+            <br />
+            <input type="radio" id="answer1f" name="question1" value="f"> F. Subject to exceptions
+            <br />
+        </ul>
+        <p id="feedback1"></p>
+    </div>
+
+    <div id="question2">
+        <p>Q2. A maxim is:</p>
+        <ul>
+            <input type="radio" id="answer2a" name="question2" value="a"> A. Universal
+            <br />
+            <input type="radio" id="answer2b" name="question2" value="b"> B. A rule of action
+            <br />
+            <input type="radio" id="answer2c" name="question2" value="c"> C. The good will
+            <br />
+            <input type="radio" id="answer2d" name="question2" value="d"> D. None of the options
+            <br />
+            <input type="radio" id="answer2e" name="question2" value="e"> E. A moral law
+            <br />
+            <input type="radio" id="answer2f" name="question2" value="f"> F. The greatest good
+            <br />
+        </ul>
+        <p id="feedback2"></p>
+    </div>
+
+    <div id="question3">
+        <p>Q3. For Kant, central to our moral lives is:</p>
+        <ul>
+            <input type="radio" id="answer3a" name="question3" value="a"> A. Virtue
+            <br />
+            <input type="radio" id="answer3b" name="question3" value="b"> B. Desires
+            <br />
+            <input type="radio" id="answer3c" name="question3" value="c"> C. Consequences
+            <br />
+            <input type="radio" id="answer3d" name="question3" value="d"> D. None of these options
+            <br />
+            <input type="radio" id="answer3e" name="question3" value="e"> E. Happiness
+            <br />
+            <input type="radio" id="answer3f" name="question3" value="f"> F. Our good will
+            <br />
+        </ul>
+        <p id="feedback3"></p>
+    </div>
+
+    <div id="question4">
+        <p>Q4. The categories are:</p>
+        <ul>
+            <input type="radio" id="answer4a" name="question4" value="a"> A. A hypothetical moral rule on which we're acting
+            <br />
+            <input type="radio" id="answer4b" name="question4" value="b"> B. Structures our minds impose on the world
+            <br />
+            <input type="radio" id="answer4c" name="question4" value="c"> C. The fundamental moral laws
+            <br />
+            <input type="radio" id="answer4d" name="question4" value="d"> D. All of the options
+            <br />
+            <input type="radio" id="answer4e" name="question4" value="e"> E. Genres of music it's morally permissible to listen to
+            <br />
+            <input type="radio" id="answer4f" name="question4" value="f"> F. None of the options
+            <br />
+        </ul>
+        <p id="feedback4"></p>
+    </div>
+
+    <div id="question5">
+        <p>Q5. For Kant, the only thing with inherent value is:</p>
+        <ul>
+            <input type="radio" id="answer5a" name="question5" value="a"> A. Knowledge
+            <br />
+            <input type="radio" id="answer5b" name="question5" value="b"> B. None of the options
+            <br />
+            <input type="radio" id="answer5c" name="question5" value="c"> C. A being with the capacity to suffer
+            <br />
+            <input type="radio" id="answer5d" name="question5" value="d"> D. Money
+            <br />
+            <input type="radio" id="answer5e" name="question5" value="e"> E. A rational being
+            <br />
+            <input type="radio" id="answer5f" name="question5" value="f"> F. Happiness
+            <br />
+        </ul>
+        <p id="feedback5"></p>
+    </div>
+
+    <script>
+        function handleAnswerSelection(questionId, correctAnswer) {
+            const questionElement = document.getElementById(questionId);
+            const radioButtons = questionElement.querySelectorAll('input[type="radio"]');
+            const feedbackElement = questionElement.querySelector('p[id^="feedback"]');
+
+            for (const radioButton of radioButtons) {
+                radioButton.addEventListener('click', () => {
+                    if (radioButton.value === correctAnswer) {
+                        feedbackElement.textContent = "Correct!";
+                        feedbackElement.style.color = "green";
+                    } else {
+                        feedbackElement.textContent = "Incorrect. Please try again.";
+                        feedbackElement.style.color = "red";
+                    }
+                });
+            }
+        }
+
+        handleAnswerSelection("question1", "b");
+        handleAnswerSelection("question2", "b");
+        handleAnswerSelection("question3", "f");
+        handleAnswerSelection("question4", "b");
+        handleAnswerSelection("question5", "e");
+    </script>
+</body>
+</html>
